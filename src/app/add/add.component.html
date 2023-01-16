@@ -1,0 +1,20 @@
+<app-admin></app-admin>
+<div class="add-form">
+    <h1>Add Book</h1>
+    <form action="#" method="post">
+
+        <input type="text" name="fullname" [(ngModel)]='book_name' placeholder="BOOKNAME" />
+
+        <input type="tel" name="isbn" [(ngModel)]='isbn' placeholder="ISBN" />
+
+        <input type="text" name="author" [(ngModel)]='author' placeholder="AUTHOR" />
+
+        <input type="text" name="category" [(ngModel)]='category' placeholder="CATEGORY" />
+
+        <input type="tel" name="prize" [(ngModel)]='prize' placeholder="PRIZE" />
+
+        <button type="button" routerLink="/booklist" (click)="addbook()">Add</button>
+    </form>
+
+
+</div>

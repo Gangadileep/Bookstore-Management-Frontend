@@ -1,0 +1,29 @@
+<app-header></app-header>
+<app-admin>
+
+</app-admin>
+
+
+<div class="tab">
+<table>
+    <tr>
+        <th>Bookname</th>
+        <th>ISBN</th>
+        <th>Author</th>
+        <th>Category</th>
+        <th>Prize</th>
+        <th class="action">Actions</th>
+    </tr>
+    <tr *ngFor="let book of data">
+        <td>{{book.book_name}}</td>
+        <td>{{book.isbn}}</td>
+        <td>{{book.author}}</td>
+        <td>{{book.category}}</td>
+        <td>{{book.prize}}</td>
+
+        <input type="button" id="editbtn" value="edit" class="edit" routerLink="/update/{{book.isbn}}">
+        
+        <input type="button" id="deletebtn" value="delete" (click)="delete(book.isbn)"class="delete">
+    </tr>
+</table>
+

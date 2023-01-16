@@ -1,0 +1,20 @@
+<div class="registration-form">
+    <h1>Registration Form </h1>
+    <form action="#" method="post">
+        <p>Full Name:</p>
+        <input type="text" name="fullname" [(ngModel)]='fullname' placeholder="FULLNAME" required=""/>
+        <span *ngIf="fullname.length <= 0 && validationErr "> Please fill</span>
+        <p>User Name:</p>
+        <input type="text" name="username" [(ngModel)]='username' placeholder="USERNAME" required/>
+        <span *ngIf="username.length <= 0 && validationErr "> Please fill</span>
+        <p>Email:</p>
+        <input type="email" name="email" [(ngModel)]='email' placeholder="EMAIL" required/>
+        <span *ngIf="email.length <= 0 && validationErr ">Please fill</span>
+        <p>Password:</p>
+        <input type="password" name="Password" [(ngModel)]='password' placeholder="PASSWORD" required />
+        <span *ngIf="password.length <= 0 && validationErr "> Please fill</span>
+        <Button type="button" (click)="register()">Register</Button>
+    </form>
+
+
+</div>
